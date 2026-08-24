@@ -230,7 +230,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
-    transform: translateY(10px) translateX(-108px);
+    transform: translateY(10px) translateX(-110px);
     scale: calc(0.6);
     opacity: 0.7;
 }
@@ -251,7 +251,7 @@ section {
     margin-top: 0.2rem;
 }
 #bf {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
 }
 .hi {
