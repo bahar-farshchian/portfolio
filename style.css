@@ -192,9 +192,6 @@ body {
     width: 100%;
     max-width: 100%;
 }
-.name {
-    font-size: 48px;
-}  
 #h-nav {
     gap: 0.5rem;
 }
@@ -205,12 +202,22 @@ body {
     scale: calc(1.05);
 }
 .div-text {
-    line-height: 1;
-    font-size: 20px;
+    font-size: 23px;
+    line-height: 1.05;
+    margin-top: 0px;
+}
+#text-h3 {
+    margin-bottom: 0;
+}
+#text-h31 {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 .div-text2  {
-    font-size: 10px;
-    margin-top: 0rem;
+    font-size: 15px;
+        line-height: 0.5;
+        max-width: 340px;
+        margin-top: 28px;
 }
 #profile-ring {
     width: min(260px, 85vw);
@@ -223,7 +230,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
-    transform: translateY(10px) translateX(-100px);
+    transform: translateY(10px) translateX(-108px);
     scale: calc(0.6);
     opacity: 0.7;
 }
@@ -244,8 +251,19 @@ section {
     margin-top: 0.2rem;
 }
 #bf {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
+}
+.hi {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+.name {
+    font-size: clamp(46px, 12vw, 54px);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    margin-bottom: 0rem;
 }
 .logo {
     width: 20px;
@@ -306,6 +324,11 @@ section {
     border: 1px solid rgba(168, 85, 247, 0.35);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
+.nav.selected {
+    color: white;
+    scale: calc(1);
+    text-decoration: none;
+}
 #h-nav.show .nav {
     width: 100%;
     padding: 10px 12px;
@@ -320,6 +343,7 @@ section {
     height: 30px;
     margin-left: 10px;
     border-radius: 100%;
+    display: none;
 }
 #h-nav.show .nav:hover {
     background-color: rgba(168, 85, 247, 0.15);
