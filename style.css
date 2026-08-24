@@ -41,7 +41,7 @@ header {
     text-shadow: 1px 1px 2px #ab81be;
 }
 .logo {
-    border:3px solid #d86deb;
+    border:3px solid #ab67f9;
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -131,7 +131,7 @@ section {
     z-index: 40;
 }
 .code-card pre {
-    transform: translateX(-2.8rem) translateY(-0.8rem);
+    transform: translateX(-5.8rem) translateY(-0.8rem);
     line-height: 1.5;
     font-size: 14px;
     height: 8.8rem;
@@ -144,7 +144,8 @@ section {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    transform: translateY(60px);
+    transform: translateY(40px);
+    opacity: 0.7;
 }
 .keyword {
     color: #c084fc;
@@ -157,7 +158,9 @@ section {
 .property {
     color: #f146dd;
 }
-
+.nav.mg {
+    display: none;
+}
 .string {
     color: #22d3ee;
 }
@@ -187,6 +190,9 @@ section {
     margin: 5px 0;
     border-radius: 5px;
 }
+#head-r {
+    display: none;
+}
 @media screen and (width <= 450px) {
 body {
     margin: 0;
@@ -201,6 +207,13 @@ body {
 }
 .nav.selected {
     scale: calc(1.05);
+}
+.nav.mg {
+    display: block;
+}
+.nav.mg img{
+    transform: translateX(-3px) translateY(-3px);
+    scale: calc(0.6);
 }
 .div-text {
     font-size: 23px;
@@ -268,6 +281,7 @@ section {
 .logo {
     width: 20px;
     height: 20px;
+    border:1.6px solid #c084fc;
 }
 .logo img {
     transform: translateX(-12px) translateY(-9px);
@@ -351,5 +365,15 @@ section {
 }
 header {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#head-r {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
 }
 } 
