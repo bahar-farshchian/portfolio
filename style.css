@@ -1,9 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 body {
     background-color: #01030F;
     color: white;
-    margin: 2rem;
-    margin-left: 2.5rem;
     font-family: 'Inter', sans-serif;
+}
+#father {
+    margin: 1rem;
 }
 header {
     display: flex;
@@ -35,7 +46,7 @@ header {
     border-radius: 100%;
 }
 .logo img {
-    transform: translateX(5px) translateY(5px);
+    transform: translateX(3px) translateY(3px);
     scale: calc(0.95);
 }
 section {
@@ -160,10 +171,14 @@ section {
     justify-content: start;
 }
 @media screen and (width <= 450px) {
-  body {
-    margin: 0.8rem;
-    margin-top: 0.2rem;
-  }
+body {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.name {
+    font-size: 48px;
+}  
 #h-nav {
     gap: 0.5rem;
 }
@@ -175,10 +190,15 @@ section {
 }
 .div-text {
     line-height: 1;
+    font-size: 20px;
+}
+.div-text2  {
+    font-size: 10px;
+    margin-top: 0rem;
 }
 #profile-ring {
-    width: 360px;
-    height: 360px;
+    width: min(260px, 85vw);
+    height: min(260px, 85vw);
 }
 #dd{
     justify-content: center;
@@ -187,15 +207,16 @@ section {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    transform: translateY(10px);
+    transform: translateY(10px) translateX(-100px);
+    scale: calc(0.6);
 }
 #dd img {
-    scale: calc(0.44);
-    transform: translateX(-20px) translateY(-940px);
+    scale: calc(0.24);
+    transform: translateX(-20px) translateY(-2140px);
 }
 .code-card {
-    transform: translateX(-8.6rem) translateY(-4.6rem);
-    scale: calc(0.8); 
+    transform: translateX(-6.6rem) translateY(-8.6rem);
+    scale: calc(0.6); 
 }
 section {
     flex-direction: row;
@@ -203,6 +224,39 @@ section {
     margin-right: 0rem;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.2rem;
+}
+#bf {
+    font-size: 20px;
+    font-weight: 300;
+}
+.logo {
+    width: 20px;
+    height: 20px;
+}
+.logo img {
+    transform: translateX(-4px) translateY(-4px);
+    scale: calc(0.6);
+}
+#father {
+    margin: 0.8rem;
+}
+.btn {
+    padding: 8px 6px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+.btn2 {
+    background: transparent;
+    border: 1px solid #7c3aed;
+    color: white;
+    padding: 8px 6px;
+    border-radius: 8px;
+}
+.code-card pre {
+    transform: translateX(-5.8rem) translateY(-0.8rem);
+    line-height: 1.5;
+    font-size: 14px;
+    height: 8.8rem;
 }
 } 
