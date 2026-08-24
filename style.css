@@ -252,14 +252,13 @@ section {
     margin-top: 0.2rem;
 }
 #bf {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 500;
 }
 .hi {
         font-size: 20px;
         margin-bottom: 18px;
     }
-
 .name {
     font-size: clamp(46px, 12vw, 54px);
     line-height: 1;
