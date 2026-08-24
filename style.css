@@ -170,6 +170,22 @@ section {
     display: flex;
     justify-content: start;
 }
+#menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#menu-btn span {
+    display: block;
+    width: 20px;
+    height: 2.2px;
+    background-color: #a855f7;
+    margin: 5px 0;
+    border-radius: 5px;
+}
 @media screen and (width <= 450px) {
 body {
     margin: 0;
@@ -186,7 +202,7 @@ body {
     font-size: 10px;
 }
 .nav.selected {
-    scale: calc(1.1);
+    scale: calc(1.05);
 }
 .div-text {
     line-height: 1;
@@ -206,9 +222,10 @@ body {
 .div-logo{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.2rem;
     transform: translateY(10px) translateX(-100px);
     scale: calc(0.6);
+    opacity: 0.7;
 }
 #dd img {
     scale: calc(0.24);
@@ -223,20 +240,20 @@ section {
     margin-left: 0rem;
     margin-right: 0rem;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 0.2rem;
 }
 #bf {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 500;
 }
 .logo {
     width: 20px;
     height: 20px;
 }
 .logo img {
-    transform: translateX(-4px) translateY(-4px);
-    scale: calc(0.6);
+    transform: translateX(-12px) translateY(-9px);
+    scale: calc(0.8);
 }
 #father {
     margin: 0.8rem;
@@ -258,5 +275,57 @@ section {
     line-height: 1.5;
     font-size: 14px;
     height: 8.8rem;
+}
+/* **2** */
+ #h-nav {
+    display: none;
+    }
+#menu-btn{
+    display: block;
+}
+#h-nav.show {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    position: absolute;
+    top: 36px;
+    right: 0;
+
+    width: 180px;
+    padding: 12px;
+    border-radius: 12px;
+
+    gap: 3px;
+
+    z-index: 1000;
+    background: rgba(15, 10, 30, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+#h-nav.show .nav {
+    width: 100%;
+    padding: 10px 12px;
+
+    font-size: 15px;
+    border-radius: 8px;
+}
+#h-nav.show .logo {
+    width: auto;
+    border:3px solid #a855f7;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+#h-nav.show .nav:hover {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+}
+header {
+    position: relative;
 }
 } 

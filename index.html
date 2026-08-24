@@ -18,6 +18,11 @@
                         <div class="nav">Contact</div>
                         <div class="nav logo"><img width="20" height="20" src="https://img.icons8.com/material-outlined/24/FFFFFF/do-not-disturb-2.png" alt="do-not-disturb-2"/></div>
                 </div>
+                <button id="menu-btn">
+                       <span></span>
+                       <span></span>
+                       <span></span>
+                </button>
         </header>
         <section>
                 <div>
@@ -60,6 +65,12 @@
         </div>
     </div>
     <script>
+const menuBtn = document.getElementById("menu-btn");
+const nav = document.getElementById("h-nav");
+
+menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("show");
+});
     </script>
 </body>
 </html>
