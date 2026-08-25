@@ -126,7 +126,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-18rem) translateY(-4rem);
+    transform: translateX(-20rem);
     font-family: JetBrains Mono;
     z-index: 40;
 }
@@ -166,9 +166,9 @@ section {
 }
 #dd img {
     z-index: 30;
-    scale: calc(0.5);
+    scale: calc(0.4);
     position: absolute;
-    transform: translateX(-700px) translateY(-760px);
+    transform: translateX(-1000px) translateY(-880px);
 }
 #dd {
     display: flex;
@@ -249,11 +249,11 @@ body {
     opacity: 0.7;
 }
 #dd img {
-    scale: calc(0.24);
+    scale: calc(0.22);
     transform: translateX(-20px) translateY(-2140px);
 }
 .code-card {
-    transform: translateX(-6.6rem) translateY(-8.6rem);
+    transform: translateX(-6.6rem) translateY(-2.6rem);
     scale: calc(0.6); 
 }
 section {
@@ -265,7 +265,7 @@ section {
     margin-top: 0.2rem;
 }
 #bf {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
 }
 .hi {
