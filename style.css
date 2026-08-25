@@ -13,6 +13,10 @@ body {
     color: white;
     font-family: 'Inter', sans-serif;
 }
+body.light {
+    background-color: #f8f5ff;
+    color: #27212f;
+}
 #father {
     margin: 1rem;
 }
@@ -107,6 +111,9 @@ section {
     padding: 14px 24px;
     border-radius: 8px;
 }
+body.light .btn2 {
+    color: black;
+}
 #profile-ring {
     width: 460px;
     height: 460px;
@@ -140,12 +147,15 @@ section {
     display: flex;
     justify-content: end;
 }
-.div-logo{
+.div-logo {
     display: flex;
     flex-direction: row;
     gap: 3rem;
     transform: translateY(40px);
     opacity: 0.7;
+}
+body.light .div-logo {
+    filter: drop-shadow(2px 4px 6px black);
 }
 .keyword {
     color: #c084fc;
@@ -253,7 +263,7 @@ body {
     transform: translateX(-20px) translateY(-2140px);
 }
 .code-card {
-    transform: translateX(-6.6rem) translateY(-2.6rem);
+    transform: translateX(-6rem) translateY(-1rem);
     scale: calc(0.6); 
 }
 section {
