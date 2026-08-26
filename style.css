@@ -286,6 +286,7 @@ section {
         font-size: 20px;
         margin-bottom: 18px;
     }
+    /* coment */
 .name {
     font-size: clamp(46px, 12vw, 54px);
     line-height: 1;
