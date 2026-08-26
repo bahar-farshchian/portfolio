@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 html,
 body {
     margin: 0;
@@ -42,17 +41,18 @@ header {
     color: #a855f7;
     font-size: 30px;
     font-weight: 700;
-    text-shadow: 1px 1px 2px #ab81be;
 }
 .logo {
     border:3px solid #ab67f9;
     width: 30px;
     height: 30px;
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.logo img {
-    transform: translateX(3px) translateY(3px);
-    scale: calc(0.95);
+.logo svg {
+    scale: calc(1.2);
 }
 section {
     margin-top: 5rem;
@@ -143,6 +143,9 @@ body.light .btn2 {
     font-size: 14px;
     height: 8.8rem;
 }
+body.light .code-card pre {
+    color: white;
+}
 #div-card {
     display: flex;
     justify-content: end;
@@ -191,7 +194,6 @@ body.light .div-logo {
     cursor: pointer;
     padding: 5px;
 }
-
 #menu-btn span {
     display: block;
     width: 20px;
@@ -219,11 +221,13 @@ body {
     scale: calc(1.05);
 }
 .nav.mg {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.nav.mg img{
-    transform: translateX(-3px) translateY(-3px);
-    scale: calc(0.6);
+.nav.mg svg{
+    transform: translateX(0px) translateY(0px);
+    scale: calc(1);
 }
 .div-text {
     font-size: 23px;
@@ -263,7 +267,7 @@ body {
     transform: translateX(-20px) translateY(-2140px);
 }
 .code-card {
-    transform: translateX(-6rem) translateY(-1rem);
+    transform: translateX(-8rem) translateY(-1.4rem);
     scale: calc(0.6); 
 }
 section {
@@ -275,8 +279,8 @@ section {
     margin-top: 0.2rem;
 }
 #bf {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 700;
 }
 .hi {
         font-size: 20px;
@@ -289,13 +293,13 @@ section {
     margin-bottom: 0rem;
 }
 .logo {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     border:1.6px solid #c084fc;
 }
-.logo img {
-    transform: translateX(-12px) translateY(-9px);
-    scale: calc(0.8);
+.logo svg {
+    transform: translateX(0px) translateY(0px);
+    scale: calc(1);
 }
 #father {
     margin: 0.8rem;
@@ -319,7 +323,7 @@ section {
     height: 8.8rem;
 }
 /* **2** */
- #h-nav {
+#h-nav {
     display: none;
     }
 #menu-btn{
