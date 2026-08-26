@@ -138,7 +138,7 @@ body.light .btn2 {
     z-index: 40;
 }
 .code-card pre {
-    transform: translateX(-5.8rem) translateY(-0.8rem);
+    transform: translateX(-6rem) translateY(-0.8rem);
     line-height: 1.5;
     font-size: 14px;
     height: 8.8rem;
@@ -158,7 +158,7 @@ body.light .code-card pre {
     opacity: 0.7;
 }
 body.light .div-logo {
-    filter: drop-shadow(2px 4px 6px black);
+    filter: drop-shadow(2px 4px 6px rgb(0, 0, 0));
 }
 .keyword {
     color: #c084fc;
@@ -310,6 +310,9 @@ section {
     border-radius: 8px;
     margin-right: 1rem;
 }
+body.light .btn {
+    border: 1.6px solid #b791f8;
+}
 .btn2 {
     background: transparent;
     border: 1px solid #7c3aed;
@@ -318,7 +321,7 @@ section {
     border-radius: 8px;
 }
 .code-card pre {
-    transform: translateX(-5.8rem) translateY(-0.8rem);
+    transform: translateX(-6.2rem) translateY(-0.8rem);
     line-height: 1.5;
     font-size: 14px;
     height: 8.8rem;
@@ -352,6 +355,12 @@ section {
 
     border: 1px solid rgba(168, 85, 247, 0.35);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+body.light #h-nav.show {
+    background: rgba(211, 211, 221, 0.85);
+}
+body.light .nav.selected {
+    color: #27212f;
 }
 .nav.selected {
     color: white;
