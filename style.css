@@ -321,7 +321,6 @@ body.light .btn {
     border-radius: 8px;
 }
 .code-card pre {
-    transform: translateX(-6.2rem) translateY(-0.8rem);
     line-height: 1.5;
     font-size: 14px;
     height: 8.8rem;
