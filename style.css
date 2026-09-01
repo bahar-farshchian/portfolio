@@ -222,6 +222,7 @@ body.light .div-logo {
 }
 #s2 {
     padding: 14px;
+    padding-left: 0;
     width: 50%;
 }
 #s2 pre {
@@ -246,7 +247,6 @@ body.light .div-logo {
     margin-left: 4rem;
     margin-right: 4rem;
     margin-top: 3rem;
-    transform: translateX(2rem);
 }
 #divs3 {
     display: flex;
@@ -260,6 +260,9 @@ body.light .div-logo {
     padding: 1rem;
     padding-left: 2rem;
 }
+body.light #divs3 {
+    background: #7c7c9d;
+}
 .s3 {
     display: flex;
     flex-direction: row;
@@ -272,11 +275,45 @@ body.light .div-logo {
     color: #A7A7B8;;
     margin: 0;
 }
+body.light .s3 pre {
+    color: white;
+}
+body.light .s3 pre span {
+    color: #cfa5f9;
+}
 .s3 pre span{
     color: #C084FC;;
 }
 .s3 svg{
     fill: #a855f7;
+}
+#s4 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 4rem;
+}
+#icon {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.skill-icons {
+    width: 100px;
+    height: 100px;
+    background-color: #242438;
+    padding: 8px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: #27212f;
+    gap: 6px;
+}
+.skill-icons h3 {
+    margin: 0;
+}
+body.light .skill-icons h3 {
+    color: white;
 }
 @media screen and (width <= 450px) {
 body {
@@ -501,12 +538,18 @@ header {
 #divs3 pre{
     font-size: 12px;
 }
-#s2 {
-    
+#s4 {
+    margin: 0;
+    margin-top: 2rem;
 }
 #s2 pre {
     font-size: 12px;
     line-height: 1.8;
     color: #a7a9bc;
+}
+#icon {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-left: 0.6rem;
 }
 } 
