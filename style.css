@@ -287,7 +287,7 @@ body.light .s3 pre span {
 .s3 svg{
     fill: #a855f7;
 }
-#s4 {
+.s {
     margin-left: 4rem;
     margin-right: 4rem;
     margin-top: 4rem;
@@ -314,6 +314,24 @@ body.light .s3 pre span {
 }
 body.light .skill-icons h3 {
     color: white;
+}
+#s5 {
+    width: 420px;
+}
+#s55 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: rgba(168, 85, 247, 0.1);
+    padding: 0.5rem;
+    border-radius: 4%;
+}
+#s5 img {
+    width: 400px;
+    height: 250px;
+    margin-top: 0.4rem;
+    border-radius: 4%;
 }
 @media screen and (width <= 450px) {
 body {
@@ -538,7 +556,7 @@ header {
 #divs3 pre{
     font-size: 12px;
 }
-#s4 {
+.s {
     margin: 0;
     margin-top: 2rem;
 }
@@ -551,5 +569,15 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-left: 0.6rem;
+}
+#s5 {
+    width: 350px;
+}
+#s55 {
+    padding-left: 1.5rem;
+}
+#s5 img {
+    width: 300px;
+    height: 170px;
 }
 } 
