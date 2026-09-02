@@ -1,15 +1,12 @@
 /* =========================================
    RESET + ROOT
 ========================================= */
-
 * {
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 html,
 body {
     margin: 0;
@@ -17,7 +14,6 @@ body {
     width: 100%;
     min-height: 100%;
 }
-
 :root {
     --bg: #070b1c;
     --bg-soft: #0a0f20;
@@ -36,12 +32,9 @@ body {
     --text: #a5a8b6;
     --text-light: #d5d6de;
 }
-
-
 /* =========================================
    BODY
 ========================================= */
-
 body {
     background:
         radial-gradient(
@@ -50,1046 +43,621 @@ body {
             transparent 25%
         ),
         #070b1c;
-
     color: var(--title);
-
     font-family:
         "Inter",
         Arial,
         sans-serif;
-
     overflow-x: hidden;
 }
-
-
 /* =========================================
    MAIN CONTAINER
 ========================================= */
-
 #father {
     width: min(100% - 64px, 1440px);
-
     margin: 0 auto;
-
     padding: 26px 0 40px;
 }
-
-
 /* =========================================
    HEADER
 ========================================= */
-
 header {
     width: 100%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
-
-
 /* BF LOGO */
-
 #bf {
     color: var(--purple);
-
     font-family:
         "Inter",
         Arial,
         sans-serif;
-
     font-size: 30px;
-
     font-weight: 800;
-
     letter-spacing: -1.5px;
-
     text-shadow:
         0 0 20px rgba(168, 85, 247, 0.15);
 }
-
-
 /* NAVIGATION */
-
 #h-nav {
     display: flex;
-
     align-items: center;
-
     gap: clamp(24px, 3vw, 48px);
 }
-
-
 .nav {
     position: relative;
-
     color: #b7b9c5;
-
     font-size: 15px;
-
     font-weight: 400;
-
     cursor: pointer;
-
     transition:
         color 0.25s ease,
         transform 0.25s ease;
 }
-
-
 .nav:hover {
     color: var(--purple-light);
 }
-
-
 .nav.selected {
     color: var(--purple-light);
-
     text-decoration: none;
-
     transform: none;
 }
-
-
 .nav.selected::after {
     content: "";
-
     position: absolute;
-
     left: 50%;
-
     bottom: -17px;
-
     width: 38px;
-
     height: 2px;
-
     transform: translateX(-50%);
-
     background: var(--purple);
-
     border-radius: 10px;
-
     box-shadow:
         0 0 8px rgba(168, 85, 247, 0.7);
 }
-
-
 /* MOON BUTTON */
-
 .logo {
     width: 46px;
-
     height: 46px;
-
     border: 1px solid #57307f;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     transition:
         border-color 0.25s ease,
         box-shadow 0.25s ease;
 }
-
-
 .logo:hover {
     border-color: var(--purple);
-
     box-shadow:
         0 0 20px rgba(168, 85, 247, 0.12);
 }
-
-
 .logo svg {
     transform: scale(1.1);
 }
-
-
 .nav.mg {
     display: none;
 }
-
-
 #head-r {
     display: none;
 }
-
-
 /* =========================================
    HERO SECTION
 ========================================= */
-
 section {
     width: 100%;
-
     min-height: 500px;
-
     margin-top: 74px;
-
     display: grid;
-
     grid-template-columns:
         minmax(420px, 1fr)
         minmax(420px, 1fr);
-
     align-items: center;
-
     column-gap: 50px;
 }
-
-
 /* =========================================
    LEFT HERO CONTENT
 ========================================= */
-
 #sec-div1 {
     position: relative;
-
     z-index: 5;
-
     padding-left: 8px;
 }
-
-
 /* HI */
-
 .hi {
     margin: 0 0 16px;
-
     color: var(--purple-light);
-
     font-size: 22px;
-
     font-weight: 500;
-
     letter-spacing: 0.2px;
 }
-
-
 /* NAME */
-
 .name {
     margin: 0;
-
     color: #f0f0f4;
-
     font-size: clamp(58px, 5vw, 82px);
-
     font-weight: 800;
-
     line-height: 1.08;
-
     letter-spacing: -3px;
 }
-
-
 .name span {
     color: var(--purple);
-
     text-shadow:
         0 0 28px rgba(168, 85, 247, 0.12);
 }
-
-
 /* JOB TITLE */
-
 .div-text {
     margin-top: 25px;
 }
-
-
 .div-text h3 {
     margin: 0;
-
     color: #e1e2e8;
-
     font-size: clamp(22px, 2vw, 30px);
-
     font-weight: 500;
-
     line-height: 1.35;
 }
-
-
 #text-h31 {
     margin-top: 2px;
 }
-
-
 .div-text span {
     color: var(--purple-light);
 }
-
-
 /* DESCRIPTION */
-
 .div-text2 {
     margin-top: 26px;
-
     max-width: 490px;
 }
-
-
 .div-text2 h4 {
     margin: 0;
-
     color: var(--text);
-
     font-size: 15px;
-
     font-weight: 400;
-
     line-height: 1.8;
 }
-
-
 /* =========================================
    BUTTONS
 ========================================= */
-
 #div-btn {
     display: flex;
-
     align-items: center;
-
     gap: 16px;
-
     margin-top: 30px;
 }
-
-
 .btn,
 .btn2 {
     min-height: 52px;
-
     padding: 0 26px;
-
     border-radius: 9px;
-
     font-family:
         "Inter",
         sans-serif;
-
     font-size: 14px;
-
     font-weight: 500;
-
     cursor: pointer;
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         border-color 0.25s ease;
 }
-
-
 .btn {
     border: none;
-
     color: white;
-
     background:
         linear-gradient(
             135deg,
             #a855f7,
             #7c3aed
         );
-
     box-shadow:
         0 8px 28px rgba(124, 58, 237, 0.28);
 }
-
-
 .btn::after {
     content: " ↗";
-
     margin-left: 6px;
-
     font-size: 16px;
 }
-
-
 .btn:hover {
     transform: translateY(-2px);
-
     box-shadow:
         0 12px 35px rgba(124, 58, 237, 0.4);
 }
-
-
 .btn2 {
     color: #e1e2e8;
-
     background: transparent;
-
     border: 1px solid #4b2377;
 }
-
-
+body.light .btn2 {
+        color: #5c5d60;
+}
 .btn2:hover {
     transform: translateY(-2px);
-
     border-color: #8b5cf6;
-
     background:
         rgba(168, 85, 247, 0.05);
 }
-
-
 /* =========================================
    SOCIAL ICONS
 ========================================= */
-
 .div-logo {
     display: flex;
-
     align-items: center;
-
     gap: 30px;
-
     margin-top: 38px;
-
     fill: #c6c8d3;
-
     opacity: 0.85;
 }
-
-
+body.light .div-logo {
+        fill: #75668f;
+}
 .logo2 {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     cursor: pointer;
-
     transition:
         transform 0.25s ease,
         fill 0.25s ease;
 }
-
-
 .logo2:hover {
     transform: translateY(-2px);
-
     fill: var(--purple-light);
 }
-
-
 .logo2 svg {
     width: 23px;
-
     height: 23px;
 }
-
-
 /* =========================================
    PROFILE AREA
 ========================================= */
-
 #dd {
     position: relative;
-
     width: 100%;
-
     height: 500px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 }
-
-
 /* PURPLE RING */
-
 #profile-ring {
     position: absolute;
-
     width: min(440px, 90%);
-
     aspect-ratio: 1;
-
     border: 2px solid var(--purple);
-
     border-radius: 50%;
-
     box-shadow:
         0 0 35px rgba(124, 58, 237, 0.24),
         inset 0 0 35px rgba(124, 58, 237, 0.06);
 
     z-index: 1;
 }
-
-
 /* PROFILE IMAGE */
-
 #dd img {
     position: absolute;
-
     z-index: 2;
-
     width: min(520px, 115%);
-
     height: auto;
-
     max-height: 540px;
-
     object-fit: contain;
-
     object-position: center bottom;
-
     bottom: -6px;
-
     left: 50%;
-
     transform: translateX(-50%);
 }
-
-
 /* =========================================
    CODE CARD
 ========================================= */
 #div-card {
     position: relative;
-
     z-index: 10;
-
     width: 280px;
-
     margin-left: auto;
-
     margin-right: 10%;
-
     margin-top: -80px;
-
     transform: none;
 }
-
-
 .code-card {
     width: 100%;
-
     min-height: 150px;
-
     padding: 18px 20px;
-
     display: flex;
-
     align-items: center;
-
     background: rgba(13, 18, 36, 0.94);
-
     border: 1px solid #39204f;
-
     border-radius: 12px;
-
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.2),
         0 0 18px rgba(124, 58, 237, 0.04);
-
     backdrop-filter: blur(10px);
-
     -webkit-backdrop-filter: blur(10px);
-
     overflow: hidden;
 }
-
-
 .code-card pre {
     width: 100%;
-
     margin: 0;
-
     padding: 0;
-
     overflow: visible;
-
     white-space: pre;
-
     font-family:
         "JetBrains Mono",
         "Fira Code",
         monospace;
-
     font-size: 11px;
-
     font-weight: 400;
-
     line-height: 1.85;
-
     color: #c6c8d3;
 }
-
-
 .code-card code {
     font-family: inherit;
 }
-
-
 /* CODE COLORS */
-
 .keyword {
     color: #c084fc;
 }
-
-
 .variable {
     color: #b875f5;
 }
-
-
 .property {
     color: #d38aff;
 }
-
-
 .string {
     color: #67d7e9;
 }
 .code-card {
     position: relative;
 }
-
-
 .code-card::after {
     content: "</>";
-
     position: absolute;
-
     top: 16px;
-
     right: 18px;
-
     color: #a855f7;
-
     font-family: monospace;
-
     font-size: 16px;
-
     font-weight: 500;
 }
-
-
 /* =========================================
    SECTION TITLE
 ========================================= */
-
 #s2h {
     display: flex;
-
     align-items: center;
-
     gap: 10px;
-
     margin: 0 0 24px;
-
     color: var(--title);
-
     font-size: 27px;
-
     font-weight: 600;
-
     letter-spacing: -0.5px;
 }
-
-
 #s2h span {
     color: var(--purple);
-
     font-size: 22px;
-
     line-height: 1;
-
     text-shadow:
         0 0 9px rgba(168, 85, 247, 0.65);
 }
-
-
 /* =========================================
    ABOUT SECTION
 ========================================= */
-
 #ss2 {
     width: 100%;
-
     margin-top: 55px;
-
     padding: 0 8px;
-
     display: grid;
-
     grid-template-columns:
         minmax(0, 1fr)
         minmax(380px, 0.95fr);
-
     align-items: center;
-
     column-gap: 80px;
 }
-
-
 /* ABOUT TEXT */
-
 #s2 {
     width: 100%;
 }
-
-
 #s2 pre {
     margin: 0;
-
     white-space: pre-wrap;
-
     color: var(--text);
-
     font-family:
         "Inter",
         sans-serif;
-
     font-size: 15px;
-
     font-weight: 400;
-
     line-height: 1.9;
 }
-
-
 #s2 button {
     width: auto;
-
     height: auto;
-
-    margin-top: 28px;
-
+    margin-top: 2px;
     padding: 12px 20px;
-
     color: var(--purple-light);
-
     background: transparent;
-
     border: 1px solid #4b2377;
-
     border-radius: 8px;
-
     font-family:
         "Inter",
         sans-serif;
-
     font-size: 13px;
-
     font-weight: 500;
-
     cursor: pointer;
-
     transition:
         background 0.25s ease,
         border-color 0.25s ease,
         transform 0.25s ease;
 }
-
-
 #s2 button:hover {
     transform: translateY(-2px);
-
     background:
         rgba(168, 85, 247, 0.06);
-
     border-color:
         rgba(168, 85, 247, 0.7);
 }
-
-
 /* =========================================
    EDUCATION CARD
 ========================================= */
-
 #divs3 {
     width: 100%;
-
     min-height: 250px;
-
     padding: 30px 34px;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     gap: 24px;
-
     background: var(--card);
-
     border: 1px solid var(--border);
-
     border-radius: 13px;
-
     box-shadow:
         0 10px 28px rgba(0, 0, 0, 0.12);
 }
-
-
 /* EDUCATION ITEM */
-
 .s3 {
     display: flex;
-
     align-items: center;
-
     gap: 24px;
 }
-
-
 /* ICON CONTAINER */
-
 .s3 > div:first-child {
     width: 48px;
-
     height: 48px;
-
     flex-shrink: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 50%;
-
     background:
         rgba(124, 58, 237, 0.05);
 }
-
-
 /* SVG */
-
 .s3 svg {
     width: 32px;
-
     height: 32px;
-
     fill: none;
-
     stroke: var(--purple);
-
     stroke-width: 1.6px;
-
     filter:
         drop-shadow(
             0 0 7px rgba(168, 85, 247, 0.16)
         );
 }
-
-
 /* INFO TEXT */
-
 .s3 pre {
     margin: 0;
-
     white-space: pre-wrap;
-
     color: #b0b2bf;
-
     font-family:
         "Inter",
         sans-serif;
-
     font-size: 13px;
-
     font-weight: 400;
-
     line-height: 1.7;
 }
-
-
 .s3 pre span {
     display: inline-block;
-
     margin-bottom: 4px;
-
     color: #bd7cf7;
-
     font-size: 14px;
-
     font-weight: 500;
 }
-
-
 /* =========================================
    GENERAL SECTION
 ========================================= */
-
 .s {
     width: 100%;
-
     margin-top: 60px;
-
     padding: 0 8px;
 }
-
-
 /* =========================================
    SKILLS
 ========================================= */
-
 #s4 {
     margin-top: 58px;
 }
-
-
 #icon {
     width: 100%;
-
     display: grid;
-
     grid-template-columns:
         repeat(6, minmax(100px, 1fr));
-
     gap: 18px;
 }
-
-
 .skill-icons {
     height: 135px;
-
     padding: 14px;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 14px;
-
     background: var(--card);
-
     border: 1px solid var(--border);
-
     border-radius: 12px;
-
     box-shadow:
         0 6px 18px rgba(0, 0, 0, 0.1);
-
     transition:
         transform 0.25s ease,
         border-color 0.25s ease,
         box-shadow 0.25s ease;
 }
-
-
 .skill-icons:hover {
     transform: translateY(-4px);
-
     border-color:
         rgba(168, 85, 247, 0.5);
-
     box-shadow:
         0 12px 28px rgba(0, 0, 0, 0.18);
 }
-
-
 .skill-icons img {
     width: 42px;
-
     height: 42px;
-
     object-fit: contain;
 }
-
-
 .skill-icons h3 {
     margin: 0;
-
     color: #d7d8df;
-
     font-family:
         "Inter",
         sans-serif;
-
     font-size: 13px;
-
     font-weight: 500;
-
     text-transform: capitalize;
 }
-
-
+body.light .skill-icons h3 {
+        color: #606166;
+}
 /* =========================================
    FEATURED PROJECTS
 ========================================= */
-
 #s5 {
     position: relative;
-
     width: 100%;
-
     margin-top: 60px;
 }
-
-
 /* PROJECT CARD */
-
 #s55 {
     width: min(440px, 100%);
-
     padding: 14px;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
-
     background: var(--card);
-
     border: 1px solid var(--border);
-
     border-radius: 13px;
-
     box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.13);
 }
-
-
 /* PROJECT IMAGE */
-
 #s55 img {
     width: 100%;
-
     aspect-ratio: 16 / 9;
-
     height: auto;
-
     object-fit: cover;
-
     border-radius: 8px;
-
     border: 1px solid var(--border-soft);
 }
-
-
 /* PROJECT TITLE */
-
 #s55 h3 {
     margin: 17px 0 7px;
-
     color: var(--title);
-
     font-family:
         "Inter",
         sans-serif;
@@ -1348,7 +916,13 @@ body.light #s55 h4 {
         border-color 0.25s ease,
         box-shadow 0.25s ease;
 }
-
+body.light .project-card {
+    background: #f1e9f9;
+    border: 1px solid #c791fd;
+    box-shadow:
+        0 8px 24px
+        rgba(59, 20, 66, 0.13);
+}
 
 .project-card:hover {
     transform: translateY(-4px);
@@ -1735,8 +1309,9 @@ body.light #s55 h4 {
     border:
         1px solid #312044;
 }
-
-
+body.light .contact-linkedin {
+    color: #5c5d60;
+}
 .contact-linkedin:hover {
     transform: translateY(-2px);
 
@@ -1851,14 +1426,10 @@ footer p span {
 /* =========================================
    TABLET / SMALL LAPTOP
 ========================================= */
-
 @media screen and (min-width: 451px) and (max-width: 900px) {
-
     #father {
         width: min(100% - 40px, 850px);
     }
-
-
     section {
         grid-template-columns:
             1fr
@@ -1866,33 +1437,21 @@ footer p span {
 
         column-gap: 20px;
     }
-
-
     .name {
         font-size: 52px;
     }
-
-
     .div-text h3 {
         font-size: 20px;
     }
-
-
     #dd {
         height: 430px;
     }
-
-
     #profile-ring {
         width: 330px;
     }
-
-
     #dd img {
         width: 410px;
     }
-
-
     #div-card {
         width: 46%;
 
@@ -1902,36 +1461,24 @@ footer p span {
 
         margin-right: 2%;
     }
-
-
     #ss2 {
         column-gap: 40px;
     }
-
-
     #icon {
         grid-template-columns:
             repeat(3, 1fr);
     }
 }
-/* **** */
-
 /* =========================================
    MOBILE
 ========================================= */
-
 @media screen and (max-width: 450px) {
-
-
     /* =================================
        GENERAL
     ================================= */
-
     * {
         box-sizing: border-box;
     }
-
-
     html,
     body {
         width: 100%;
@@ -1941,8 +1488,6 @@ footer p span {
 
         overflow-x: hidden;
     }
-
-
     body {
         background:
             radial-gradient(
@@ -1952,8 +1497,6 @@ footer p span {
             ),
             #070b1c;
     }
-
-
     #father {
         width: 100%;
 
@@ -1964,13 +1507,9 @@ footer p span {
             16px
             35px;
     }
-
-
-
     /* =================================
        HEADER
     ================================= */
-
     header {
         width: 100%;
 
@@ -1984,8 +1523,6 @@ footer p span {
 
         position: relative;
     }
-
-
     #bf {
         color: #a855f7;
 
@@ -1995,13 +1532,9 @@ footer p span {
 
         letter-spacing: -1px;
     }
-
-
     #h-nav {
         display: none;
     }
-
-
     #head-r {
         display: flex;
 
@@ -2009,46 +1542,28 @@ footer p span {
 
         gap: 13px;
     }
-
-
     .nav.mg {
         display: flex;
 
         align-items: center;
-
         justify-content: center;
     }
-
-
     .logo {
         width: 35px;
-
         height: 35px;
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         border: 1px solid #4b2377;
-
         border-radius: 50%;
-
         background: transparent;
     }
-
-
     .logo svg {
         transform: scale(0.9);
     }
-
-
     #menu-btn {
         display: flex;
-
         flex-direction: column;
-
         justify-content: center;
 
         align-items: center;
@@ -2213,7 +1728,7 @@ footer p span {
 
         color: #eeeeF3;
 
-        font-size: 31px;
+        font-size: 34px;
 
         font-weight: 700;
 
@@ -2361,8 +1876,6 @@ footer p span {
             1px solid #3d2559;
     }
 
-
-
     /* =================================
        SOCIAL ICONS
     ================================= */
@@ -2382,7 +1895,6 @@ footer p span {
 
         transform: none;
     }
-
 
     .logo2 {
         display: flex;
@@ -2664,7 +2176,7 @@ footer p span {
 
         height: auto;
 
-        margin-top: 18px;
+        margin-top: 1px;
 
         padding:
             9px
@@ -2893,8 +2405,6 @@ footer p span {
 
         text-transform: capitalize;
     }
-
-
 
     /* =================================
        FEATURED PROJECTS
@@ -3379,8 +2889,6 @@ footer p span {
     border:
         1px solid #312044;
 }
-
-
 .contact-linkedin span {
     font-size: 10px;
 
