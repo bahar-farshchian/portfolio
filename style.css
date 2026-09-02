@@ -8,9 +8,9 @@ body {
     width: 100%;
 }
 body {
-    background-color: #01030F;
-    color: white;
-    font-family: 'Inter', sans-serif;
+    background: #070b1c;
+    color: #e8e8f0;
+    font-family: "Inter", sans-serif;
 }
 body.light {
     background-color: #f8f5ff;
@@ -333,7 +333,9 @@ body.light .skill-icons h3 {
     margin-top: 0.4rem;
     border-radius: 4%;
 }
-@media screen and (width <= 450px) {
+/* **** */
+
+@media screen and (max-width: 450px) {
 body {
     margin: 0;
     width: 100%;
@@ -527,57 +529,759 @@ header {
     align-items: center;
     gap: 8px;
 }
-#ss2 {
+/* #ss2 {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     transform: translateX(-6rem);
     margin-left: 0;
     margin: 0;
-}
-#divs3 {
+} */
+/* #divs3 {
     margin-right: 0rem;
     width: 100%;
     transform: translateX(6rem);
     gap: 0.5rem;
     padding-left: 0.5rem;
-}
-.s3 svg {
+} */
+/* .s3 svg {
     stroke: #e3ccf8;
     stroke-width: 1.5px;
-}
-#s2h {
+} */
+/* #s2h {
     font-size: 20px;
-}
-#s2 button {
+} */
+/* #s2 button {
     width: 120px;
     height: 38px;
-}
+} */
 #divs3 pre{
     font-size: 12px;
 }
-.s {
+/* .s {
     margin: 0;
     margin-top: 2rem;
-}
-#s2 pre {
+} */
+/* #s2 pre {
     font-size: 12px;
     line-height: 1.8;
     color: #a7a9bc;
-}
-#icon {
+} */
+/* #icon {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-left: 0.6rem;
-}
+} */
 #s5 {
     width: 350px;
 }
-#s55 {
+/* #s55 {
     padding-left: 1.5rem;
-}
+} */
 #s5 img {
     width: 300px;
     height: 170px;
+}
+
+
+/* =========================
+   ABOUT ME
+========================= */
+
+#ss2 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin: 12px 0 0 0;
+
+    padding: 0 14px;
+
+    transform: none;
+}
+
+
+/* متن About */
+
+#s2 {
+    width: 100%;
+
+    padding: 0;
+}
+
+
+#s2h {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0 0 20px 0;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+
+#s2h span {
+    color: #A855F7;
+
+    margin-right: 0;
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* متن About Me */
+
+#s2 pre {
+    margin: 0;
+
+    white-space: pre-wrap;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #a7a9bc;
+}
+
+
+/* More About Me Button */
+
+#s2 button {
+    width: auto;
+
+    height: auto;
+
+    margin-top: 20px;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    color: #C084FC;
+
+    border: 1px solid #7c3aed;
+
+    background: transparent;
+
+    font-size: 11px;
+}
+
+
+#s2 button:hover {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+
+/* =========================
+   EDUCATION CARD
+========================= */
+
+#divs3 {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 19px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+
+    background: #0B0B1A;
+
+    border: 1px solid #242438;
+
+    border-radius: 10px;
+
+    transform: none;
+}
+
+
+/* هر آیتم */
+
+.s3 {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+
+/* آیکون */
+
+.s3 > div:first-child {
+    width: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    color: #A855F7;
+}
+
+
+.s3 svg {
+    width: 27px;
+
+    height: 27px;
+
+    fill: #A855F7;
+
+    stroke: #e3ccf8;
+
+    stroke-width: 1.5px;
+}
+
+
+/* متن کارت */
+
+.s3 pre {
+    margin: 0;
+
+    white-space: pre-wrap;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: #A7A7B8;
+}
+
+
+.s3 pre span {
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    color: #C084FC;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.s {
+    width: 100%;
+
+    margin: 36px 0 0 0;
+
+    padding: 0 14px;
+}
+
+
+#s4 {
+    margin-top: 38px;
+}
+
+
+/* عنوان Skills */
+
+#s4 #s2h {
+    margin-bottom: 20px;
+}
+
+
+/* Grid */
+
+#icon {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin: 0;
+}
+
+
+/* Skill Card */
+
+.skill-icons {
+    width: 100%;
+
+    height: 98px;
+
+    padding: 8px;
+
+    background-color: #11172a;
+
+    border: 1px solid #242438;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* Icon */
+
+.skill-icons img {
+    width: 29px;
+
+    height: 29px;
+
+    object-fit: contain;
+}
+
+
+/* Text */
+
+.skill-icons h3 {
+    margin: 0;
+
+    color: #d6d7df;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    text-transform: capitalize;
+}
+
+
+/* ===================================
+   MOBILE VISUAL DESIGN
+=================================== */
+
+
+/* Section Titles */
+
+#s2h {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0 0 22px;
+
+    color: #e7e8ee;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.2px;
+}
+
+
+#s2h span {
+    width: 8px;
+    height: 8px;
+
+    margin: 0;
+
+    color: #a855f7;
+
+    font-size: 17px;
+
+    line-height: 8px;
+
+    text-shadow:
+        0 0 7px rgba(168, 85, 247, 0.7);
+}
+
+
+/* ======================
+   ABOUT TEXT
+====================== */
+
+#s2 pre {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    line-height: 1.9;
+
+    color: #a5a8b6;
+
+    white-space: pre-wrap;
+}
+
+
+/* More About Button */
+
+#s2 button {
+    width: auto;
+    height: auto;
+
+    margin-top: 20px;
+
+    padding: 10px 15px;
+
+    background: transparent;
+
+    border: 1px solid #4b2377;
+
+    border-radius: 7px;
+
+    color: #c084fc;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+#s2 button:hover {
+    background: rgba(168, 85, 247, 0.08);
+
+    border-color: #8b5cf6;
+}
+
+
+/* ======================
+   EDUCATION CARD
+====================== */
+
+#divs3 {
+    background: #0d1224;
+
+    border: 1px solid #1b2138;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.13);
+}
+
+
+/* Info Item */
+
+.s3 {
+    gap: 14px;
+}
+
+
+/* Info Icons */
+
+.s3 > div:first-child {
+    width: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    color: #a855f7;
+}
+
+
+.s3 svg {
+    width: 27px;
+    height: 27px;
+
+    fill: none;
+
+    stroke: #a855f7;
+
+    stroke-width: 1.7px;
+
+    filter:
+        drop-shadow(
+            0 0 5px rgba(168, 85, 247, 0.15)
+        );
+}
+
+
+/* Info Text */
+
+.s3 pre {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: #a7aab7;
+
+    white-space: pre-wrap;
+}
+
+
+.s3 pre span {
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    color: #b16cf7;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* ======================
+   SKILLS
+====================== */
+
+.skill-icons {
+    background: #0d1224;
+
+    border: 1px solid #1b2138;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.skill-icons:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(168, 85, 247, 0.45);
+}
+
+
+.skill-icons img {
+    width: 29px;
+    height: 29px;
+
+    object-fit: contain;
+}
+
+
+.skill-icons h3 {
+    margin: 0;
+
+    color: #d5d6de;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    text-transform: capitalize;
+}
+/* ==================================
+   FEATURED PROJECTS
+================================== */
+
+#s5 {
+    width: 100%;
+
+    margin-top: 40px;
+
+    background: transparent;
+}
+
+
+/* Title */
+
+#s5 #s2h {
+    margin-bottom: 20px;
+}
+
+
+/* Project Card */
+
+#s55 {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    background: #0d1224;
+
+    border: 1px solid #1b2138;
+
+    border-radius: 9px;
+
+    padding: 12px;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.14);
+
+    box-sizing: border-box;
+}
+
+
+/* Project Image */
+
+#s55 img {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    margin: 0;
+
+    border-radius: 6px;
+
+    border: 1px solid #151c31;
+}
+
+
+/* Project Title */
+
+#s55 h3 {
+    margin: 14px 0 6px;
+
+    color: #e7e8ee;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* Project Description */
+
+#s55 h4 {
+    margin: 0 0 14px;
+
+    color: #a5a8b6;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* Technology Tags Container */
+
+.project-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Technology Tag */
+
+.pro-p {
+    padding: 5px 8px;
+
+    background: rgba(124, 58, 237, 0.06);
+
+    border: 1px solid #3f235f;
+
+    border-radius: 5px;
+
+    color: #b875f5;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+/* Project Links Container */
+
+.project-links {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #181f34;
+}
+
+
+/* Links */
+
+#s55 a {
+    color: #b16cf7;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    transition: color 0.25s ease;
+}
+
+
+#s55 a:hover {
+    color: #d8b4fe;
+}
+
+
+/* Live Demo Icon */
+
+#s55 a:first-child::before {
+    content: "↗ ";
+
+    font-size: 13px;
 }
 } 
