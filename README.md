@@ -86,14 +86,12 @@ The design focuses on a clean and modern dark interface with:
 
 Feel free to reach out or connect with me!
 
-- 📧 Email: Your Email
-- 💼 LinkedIn: Your LinkedIn Link
-- 💻 GitHub: Your GitHub Link
+- 📧 Email: bahar.farshchian.dev@gmail.com 
+- 🌐 Website: https://bahar-farshchian.github.io/portfolio/
 
 ## 🔮 Future Improvements
 
 - Add more projects
-- Add light mode ☀️
 - Add animations and transitions
 - Improve accessibility
 - Add more interactive elements
