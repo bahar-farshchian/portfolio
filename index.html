@@ -34,17 +34,19 @@
                         </button>
                 </div>
         </header>
-        <section class="hero-3d">
+        <section>
                 <div id="sec-div1">
-                        <h4 class="hi">Hi, Im</h4>
-                        <h1 class="name">Bahar <span>Farshchian</span></h1>
-                        <div class="div-text">
-                                <h3 id="text-h3">Computer Engineering Student</h3>
-                                <h3 id="text-h31">& <span>Web Developer</span></h3>
-                        </div>
-                        <div class="div-text2">
-                                <h4>I build clean, responsive and user-focused</h4>
-                                <h4>web experiences</h4>
+                        <div class="hero-3d">
+                            <h4 class="hi">Hi, Im</h4>
+                            <h1 class="name">Bahar <span>Farshchian</span></h1>
+                            <div class="div-text">
+                                    <h3 id="text-h3">Computer Engineering Student</h3>
+                                    <h3 id="text-h31">& <span>Web Developer</span></h3>
+                            </div>
+                            <div class="div-text2">
+                                    <h4>I build clean, responsive and user-focused</h4>
+                                    <h4>web experiences</h4>
+                            </div>
                         </div>
                         <div id="div-btn">
                                 <button class="btn">View My Projects</button>
@@ -364,6 +366,44 @@ if (hero) {
     });
 
 }
+
+// ===============================
+// CODE CARD TYPING EFFECT
+// ===============================
+
+const codeCard = document.querySelector(".code-card code");
+
+const codeLines = [
+    `<span class="keyword">const</span> <span class="variable">developer</span> = {`,
+    `    <span class="property">name</span>: <span class="string">"Bahar"</span>,`,
+    `    <span class="property">passion</span>: <span class="string">"Web Development"</span>,`,
+    `    <span class="property">focus</span>: <span class="string">"Clean Code & UI/UX"</span>,`,
+    `    <span class="property">learning</span>: <span class="string">"Everyday"</span>`,
+    `};`
+];
+
+let lineIndex = 0;
+
+function typeCode() {
+
+    if (lineIndex < codeLines.length) {
+
+        codeCard.innerHTML += codeLines[lineIndex] + "\n";
+
+        lineIndex++;
+
+        setTimeout(typeCode, 450);
+
+    } else {
+
+        codeCard.innerHTML +=
+            `<span class="cursor"></span>`;
+    }
+}
+
+codeCard.innerHTML = "";
+
+typeCode();
 
 </script>
 </body>

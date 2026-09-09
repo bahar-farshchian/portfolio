@@ -433,7 +433,7 @@ body.light .div-logo {
     min-height: 150px;
     padding: 18px 20px;
     display: flex;
-    align-items: center;
+    align-items: start;
     background: rgba(13, 18, 36, 0.94);
     border: 1px solid #39204f;
     border-radius: 12px;
@@ -462,6 +462,10 @@ body.light .div-logo {
 .code-card code {
     font-family: inherit;
 }
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }}
 /* CODE COLORS */
 .keyword {
     color: #c084fc;
@@ -485,7 +489,7 @@ body.light .div-logo {
     right: 18px;
     color: #a855f7;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 /* =========================================
@@ -1516,8 +1520,8 @@ footer p span {
 
     position: absolute;
 
-    width: 450px;
-    height: 450px;
+    width: 300px;
+    height: 300px;
 
     left: var(--mouse-x);
     top: var(--mouse-y);
@@ -1757,6 +1761,14 @@ footer p span {
             rgba(0, 0, 0, 0.45);
     }
 
+    body.light #h-nav.show {
+        background:
+           #ebe2fa;
+
+        border:
+            1px solid #c084fc;
+    }
+
 
     #h-nav.show .nav {
         width: 100%;
@@ -1769,7 +1781,9 @@ footer p span {
 
         border-radius: 7px;
     }
-
+    body.light #h-nav.show .nav {
+        color: #8a8c92; 
+    }
 
     #h-nav.show .nav:hover {
         color: #c084fc;
@@ -1777,8 +1791,12 @@ footer p span {
         background:
             rgba(168, 85, 247, 0.08);
     }
+    body.light #h-nav.show .nav:hover {
+        color: #c084fc;
 
-
+        background:
+            rgba(161, 69, 247, 0.08);
+    }
     #h-nav.show .logo {
         display: none;
     }
@@ -2071,7 +2089,7 @@ footer p span {
 
         top: 0px;
 
-        left: 50%;
+        left: 52%;
 
         transform: translateX(-50%);
 
@@ -2163,7 +2181,7 @@ footer p span {
 
         display: flex;
 
-        align-items: center;
+        align-items: start;
 
         background:
             rgba(13, 18, 36, 0.96);
@@ -2200,9 +2218,8 @@ footer p span {
 
         right: 15px;
 
-        font-size: 13px;
+        font-size: 10px;
     }
-
     /* =================================
        ABOUT SECTION
     ================================= */
