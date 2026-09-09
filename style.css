@@ -2214,11 +2214,7 @@ footer p span {
     }
 
     .code-card::after {
-        top: 13px;
-
-        right: 15px;
-
-        font-size: 0px;
+        display: none;
     }
     /* =================================
        ABOUT SECTION
