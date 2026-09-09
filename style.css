@@ -325,13 +325,83 @@ body.light .div-logo {
     position: absolute;
     width: min(440px, 90%);
     aspect-ratio: 1;
-    border: 2px solid var(--purple);
+    /* border: 2px solid var(--purple); */
     border-radius: 50%;
-    box-shadow:
+    /* box-shadow:
         0 0 35px rgba(124, 58, 237, 0.24),
-        inset 0 0 35px rgba(124, 58, 237, 0.06);
+        inset 0 0 35px rgba(124, 58, 237, 0.06); */
 
     z-index: 1;
+}
+/* =========================================
+   ANIMATED PROFILE GLOW
+========================================= */
+
+#profile-ring {
+    overflow: visible;
+}
+
+/* Moving light around the ring */
+
+#profile-ring::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -7px;
+
+    border-radius: 50%;
+
+    border: 2px solid transparent;
+
+    border-top-color: #c084fc;
+    border-right-color: rgba(168, 85, 247, 0.35);
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(168, 85, 247, 0.9)
+        )
+        drop-shadow(
+            0 0 18px rgba(124, 58, 237, 0.45)
+        );
+
+    animation:
+        profileGlowRotate 4s linear infinite;
+
+    pointer-events: none;
+}
+
+@keyframes profileGlowRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+#profile-ring {
+    animation: profileRingPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes profileRingPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 35px rgba(124, 58, 237, 0.24),
+            inset 0 0 35px rgba(124, 58, 237, 0.06);
+    }
+
+    50% {
+        box-shadow:
+            0 0 55px rgba(124, 58, 237, 0.42),
+            0 0 90px rgba(168, 85, 247, 0.08),
+            inset 0 0 45px rgba(124, 58, 237, 0.1);
+    }
+
 }
 /* PROFILE IMAGE */
 #dd img {
@@ -1423,6 +1493,59 @@ footer p span {
     background:
         rgba(168, 85, 247, 0.08);
 }
+
+/* =========================================
+   3D HERO EFFECT
+========================================= */
+
+.hero-3d {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+
+    transition: transform 0.15s ease-out;
+}
+
+/* Moving purple light */
+
+.hero-3d::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    left: var(--mouse-x);
+    top: var(--mouse-y);
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(168, 85, 247, 0.12),
+            transparent 65%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    transition:
+        left 0.15s ease-out,
+        top 0.15s ease-out;
+}
+
+/* Keep hero content above light */
+
+.hero-3d > * {
+    position: relative;
+    z-index: 1;
+}
 /* =========================================
    TABLET / SMALL LAPTOP
 ========================================= */
@@ -1940,35 +2063,40 @@ footer p span {
     #profile-ring {
         position: absolute;
 
-        width: 215px;
+        width: 255px;
 
-        height: 215px;
+        height: 255px;
 
         aspect-ratio: 1;
 
-        top: 28px;
+        top: 0px;
 
         left: 50%;
 
         transform: translateX(-50%);
 
-        border:
-            1.5px solid #7c3aed;
+        /* border:
+            1.5px solid #7c3aed; */
 
         border-radius: 50%;
 
-        box-shadow:
+        /* box-shadow:
             0 0 28px
             rgba(124, 58, 237, 0.24),
 
             inset
             0 0 22px
-            rgba(124, 58, 237, 0.05);
+            rgba(124, 58, 237, 0.05); */
 
         z-index: 1;
     }
+     #profile-ring::before {
+        animation-duration: 5s;
+    }
 
-
+    #profile-ring {
+        animation-duration: 4.5s;
+    }
 
     /* PROFILE IMAGE */
 
@@ -2970,5 +3098,13 @@ footer p {
     text-decoration: none;
 
     font-size: 13px;
+}
+.hero-3d {
+        transform: none !important;
+        perspective: none;
+}
+
+.hero-3d::before {
+        display: none;
 }
 }

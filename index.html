@@ -34,7 +34,7 @@
                         </button>
                 </div>
         </header>
-        <section>
+        <section class="hero-3d">
                 <div id="sec-div1">
                         <h4 class="hi">Hi, Im</h4>
                         <h1 class="name">Bahar <span>Farshchian</span></h1>
@@ -309,5 +309,62 @@ mode.forEach((m) => {
     });
 });
     </script>
+    <script>
+
+const hero = document.querySelector(".hero-3d");
+
+if (hero) {
+
+    hero.addEventListener("mousemove", (e) => {
+
+        const rect = hero.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX =
+            ((y - centerY) / centerY) * -3;
+
+        const rotateY =
+            ((x - centerX) / centerX) * 3;
+
+        hero.style.transform =
+            `perspective(1200px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)`;
+
+        hero.style.setProperty(
+            "--mouse-x",
+            `${x}px`
+        );
+
+        hero.style.setProperty(
+            "--mouse-y",
+            `${y}px`
+        );
+    });
+
+    hero.addEventListener("mouseleave", () => {
+
+        hero.style.transform =
+            "perspective(1200px) rotateX(0deg) rotateY(0deg)";
+
+        hero.style.setProperty(
+            "--mouse-x",
+            "50%"
+        );
+
+        hero.style.setProperty(
+            "--mouse-y",
+            "50%"
+        );
+    });
+
+}
+
+</script>
 </body>
 </html>
