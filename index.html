@@ -460,6 +460,180 @@ for (let i = 0; i < starCount; i++) {
 
     starsContainer.appendChild(star);
 }
+
+
+
+const logo = document.getElementById("bf");
+
+let clickCount = 0;
+let clickTimer;
+
+
+// تشخیص ۵ کلیک سریع روی لوگو
+logo.addEventListener("click", () => {
+
+    clickCount++;
+
+    clearTimeout(clickTimer);
+
+    clickTimer = setTimeout(() => {
+        clickCount = 0;
+    }, 1000);
+
+
+    if (clickCount === 2) {
+
+        activateGalaxyExplosion();
+
+        clickCount = 0;
+    }
+});
+
+
+function activateGalaxyExplosion() {
+
+    // جلوگیری از اجرای همزمان
+    if (document.body.classList.contains("galaxy-active")) {
+        return;
+    }
+
+    document.body.classList.add("galaxy-active");
+
+
+    // محل لوگو
+    const rect = logo.getBoundingClientRect();
+
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+
+    // ساخت موج نور
+    const wave = document.createElement("div");
+
+    wave.classList.add("galaxy-wave");
+
+    wave.style.left = centerX + "px";
+    wave.style.top = centerY + "px";
+
+    document.body.appendChild(wave);
+
+
+    // ساخت ذرات انفجار
+    for (let i = 0; i < 45; i++) {
+
+        createGalaxyParticle(
+            centerX,
+            centerY
+        );
+    }
+
+
+    // حذف موج
+    setTimeout(() => {
+        wave.remove();
+    }, 1200);
+
+
+    // پایان حالت ویژه
+    setTimeout(() => {
+
+        document.body.classList.remove(
+            "galaxy-active"
+        );
+
+    }, 3500);
+}
+
+
+function createGalaxyParticle(x, y) {
+
+    const particle =
+        document.createElement("span");
+
+    particle.classList.add(
+        "galaxy-particle"
+    );
+
+
+    particle.style.left = x + "px";
+    particle.style.top = y + "px";
+
+
+    // زاویه تصادفی
+    const angle =
+        Math.random() * Math.PI * 2;
+
+
+    // فاصله پرتاب
+    const distance =
+        Math.random() * 250 + 100;
+
+
+    const targetX =
+        Math.cos(angle) * distance;
+
+    const targetY =
+        Math.sin(angle) * distance;
+
+
+    particle.style.setProperty(
+        "--x",
+        targetX + "px"
+    );
+
+    particle.style.setProperty(
+        "--y",
+        targetY + "px"
+    );
+
+
+    // اندازه تصادفی
+    const size =
+        Math.random() * 3 + 1;
+
+    particle.style.width =
+        size + "px";
+
+    particle.style.height =
+        size + "px";
+
+
+    // سرعت تصادفی
+    particle.style.animationDuration =
+        Math.random() * 1 + 1.2 + "s";
+
+
+    // تأخیر خیلی کم
+    particle.style.animationDelay =
+        Math.random() * 0.15 + "s";
+
+
+    // رنگ تصادفی
+    const colors = [
+        "#ffffff",
+        "#a855f7",
+        "#6366f1"
+    ];
+
+    particle.style.background =
+        colors[
+            Math.floor(
+                Math.random() *
+                colors.length
+            )
+        ];
+
+
+    document.body.appendChild(
+        particle
+    );
+
+
+    // حذف ذره
+    setTimeout(() => {
+        particle.remove();
+    }, 2500);
+}
 </script>
 </body>
 </html>

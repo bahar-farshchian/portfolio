@@ -200,6 +200,7 @@ header {
     font-size: 30px;
     font-weight: 800;
     letter-spacing: -1.5px;
+    cursor: pointer;
     text-shadow:
         0 0 20px rgba(168, 85, 247, 0.15);
 }
@@ -487,6 +488,10 @@ body.light .div-logo {
         drop-shadow(
             0 0 18px rgba(124, 58, 237, 0.45)
         );
+
+    box-shadow:
+    inset 0 0 8px rgba(168, 85, 247, 0.35),
+    inset 0 0 18px rgba(124, 58, 237, 0.18);
 
     animation:
         profileGlowRotate 4s linear infinite;
@@ -1018,6 +1023,130 @@ body.light #s55 h4 {
     color: #625c6b;
 }
 
+/* secret mode */
+.galaxy-wave {
+    position: fixed;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(174, 150, 182, 0.9) 0%,
+            rgba(168, 85, 247, 0.5) 20%,
+            rgba(99, 102, 241, 0.2) 45%,
+            transparent 70%
+        );
+
+    animation:
+        galaxyWave 1.2s
+        ease-out forwards;
+}
+
+@keyframes galaxyWave {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(35);
+
+        opacity: 0;
+    }
+}
+.galaxy-particle {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 99998;
+
+    box-shadow:
+        0 0 8px currentColor;
+
+    animation:
+        particleExplosion
+        ease-out
+        forwards;
+}
+
+
+@keyframes particleExplosion {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+        opacity: 0;
+
+    }
+
+
+    15% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.5);
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(0);
+
+        opacity: 0;
+
+    }
+}
+body.galaxy-active #stars .star {
+
+    animation-duration:
+        5s !important;
+
+    opacity: 0.9;
+
+}
+body.galaxy-active #father::before,
+body.galaxy-active #father::after {
+
+    opacity: 0.16;
+
+}
 /* =========================================
    FEATURED PROJECTS - DESKTOP
 ========================================= */
@@ -2204,9 +2333,9 @@ footer p span {
     #profile-ring {
         position: absolute;
 
-        width: 255px;
+        width: 240px;
 
-        height: 255px;
+        height: 240px;
 
         aspect-ratio: 1;
 
