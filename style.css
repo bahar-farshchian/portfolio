@@ -159,8 +159,6 @@ body.light .star {
     }
 
 }
-
-
 /* چشمک خیلی ظریف */
 @keyframes twinkle {
 
@@ -172,6 +170,30 @@ body.light .star {
         opacity: 0.9;
     }
 
+}
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #a855f7,
+        #c084fc
+    );
+
+    box-shadow:
+        0 0 6px rgba(168, 85, 247, 0.7),
+        0 0 12px rgba(168, 85, 247, 0.35);
+
+    z-index: 99999;
+
+    transition: width 0.1s linear;
 }
 /* =========================================
    MAIN CONTAINER
@@ -201,6 +223,7 @@ header {
     font-weight: 800;
     letter-spacing: -1.5px;
     cursor: pointer;
+    user-select: none;
     text-shadow:
         0 0 20px rgba(168, 85, 247, 0.15);
 }
@@ -297,6 +320,7 @@ section {
     font-size: 22px;
     font-weight: 500;
     letter-spacing: 0.2px;
+    user-select: none;
 }
 /* NAME */
 .name {
@@ -306,6 +330,7 @@ section {
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -3px;
+    user-select: none;
 }
 .name span {
     color: var(--purple);
@@ -315,6 +340,7 @@ section {
 /* JOB TITLE */
 .div-text {
     margin-top: 25px;
+    user-select: none;
 }
 .div-text h3 {
     margin: 0;
@@ -333,6 +359,7 @@ section {
 .div-text2 {
     margin-top: 26px;
     max-width: 490px;
+    user-select: none;
 }
 .div-text2 h4 {
     margin: 0;
@@ -1043,7 +1070,7 @@ body.light #s55 h4 {
     background:
         radial-gradient(
             circle,
-            rgba(174, 150, 182, 0.9) 0%,
+            rgba(225, 156, 250, 0.9) 0%,
             rgba(168, 85, 247, 0.5) 20%,
             rgba(99, 102, 241, 0.2) 45%,
             transparent 70%
@@ -1712,6 +1739,34 @@ footer p span {
     color: #a855f7;
 }
 
+#footer-heart {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.25s ease;
+}
+
+#footer-heart:hover {
+    transform: scale(1.2);
+}
+
+#heart-message {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    font-size: 13px;
+    transition: 
+        opacity 0.4s ease,
+        max-height 0.4s ease,
+        margin-top 0.4s ease;
+}
+
+#heart-message.show {
+    max-height: 40px;
+    opacity: 1;
+    margin-top: 8px;
+}
 
 .back-to-top {
     width: 34px;

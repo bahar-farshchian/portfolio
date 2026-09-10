@@ -9,6 +9,7 @@
     <title>portfolio</title>
 </head>
 <body>
+    <div id="scroll-progress"></div>
     <div id="stars"></div>
     <div id="father">
         <header>
@@ -249,12 +250,14 @@ FEATURED PROJECTS
 FOOTER
 ===== -->
 <footer>
-    <div class="footer-logo">BF</div>
+    <div class="footer-logo">Bahar</div>
+
     <p>
-        © 2026 Bahar Farshchian.
-        All rights reserved.
-        <span>♥</span>
+        © 2024 Bahar Farshchian. All rights reserved.
+        <span id="footer-heart">💜</span>
     </p>
+
+    <div id="heart-message">Thanks for visiting my portfolio! ✨</div>
     <a href="#top" class="back-to-top">
         ↑
     </a>
@@ -634,6 +637,40 @@ function createGalaxyParticle(x, y) {
         particle.remove();
     }, 2500);
 }
+
+const heart = document.getElementById("footer-heart");
+const heartMessage = document.getElementById("heart-message");
+
+heart.addEventListener("click", () => {
+
+    // تبدیل یک قلب به پنج قلب
+    heart.textContent = "💜💜💜";
+
+    // نمایش پیام
+    heartMessage.classList.add("show");
+
+    // یک افکت کوچک
+    heart.style.transform = "scale(1.2)";
+
+    setTimeout(() => {
+        heart.style.transform = "scale(1)";
+    }, 250);
+});
+
+const scrollProgress = document.getElementById("scroll-progress");
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop = window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    const scrollPercent =
+        (scrollTop / documentHeight) * 100;
+
+    scrollProgress.style.width = scrollPercent + "%";
+});
 </script>
 </body>
 </html>
