@@ -14,6 +14,13 @@ body {
     width: 100%;
     min-height: 100%;
 }
+#s2,
+#s4,
+#s5,
+#divs3,
+#contact {
+    scroll-margin-top: 80px;
+}
 :root {
     --bg: #070b1c;
     --bg-soft: #0a0f20;
@@ -210,7 +217,20 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
+    left: 0;
+    top: 0;
+    padding: 8px 14px;
     justify-content: space-between;
+    position: fixed;
+    z-index: 200;
+
+    background: rgba(20, 12, 30, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+   background: rgba(20, 12, 30, 0.72);
+   backdrop-filter: blur(14px);
+   -webkit-backdrop-filter: blur(14px);
 }
 /* BF LOGO */
 #bf {
@@ -1956,6 +1976,7 @@ footer p span {
         justify-content: space-between;
 
         position: relative;
+        padding: 0;
     }
     #bf {
         color: #a855f7;
@@ -2465,7 +2486,7 @@ footer p span {
         min-width: 0;
 
         margin:
-            -12px
+            -16px
             0
             0;
 
@@ -3426,5 +3447,13 @@ footer p {
 
 .hero-3d::before {
         display: none;
+}
+
+#s2,
+#s4,
+#s5,
+#divs3,
+#contact {
+    scroll-margin-top: 40px;
 }
 }
