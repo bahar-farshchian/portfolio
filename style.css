@@ -227,10 +227,9 @@ header {
     background: rgba(20, 12, 30, 0.72);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-
-   background: rgba(20, 12, 30, 0.72);
-   backdrop-filter: blur(14px);
-   -webkit-backdrop-filter: blur(14px);
+}
+body.light header {
+    background: rgba(222, 203, 242, 0.72);
 }
 /* BF LOGO */
 #bf {
@@ -1977,6 +1976,10 @@ footer p span {
 
         position: relative;
         padding: 0;
+        background: none;
+    }
+    body.light header {
+        background: none;
     }
     #bf {
         color: #a855f7;
